@@ -8,13 +8,13 @@ const footerLinks = {
     { name: 'Escrow', href: '#trust' },
     { name: 'Checkout Links', href: '#solution' },
     { name: 'Seller Dashboard', href: '#features' },
-    { name: 'Infrastructure', href: '#vision' }
+    { name: 'Pricing', href: '#pricing' }
   ],
   company: [
-    { name: 'About Blocrail', href: '#' },
-    { name: 'Live Metrics', href: '#' },
-    { name: 'Press Kit', href: '#' },
-    { name: 'Contact Us', href: '#' }
+    { name: 'About Blocrail', href: '#about' },
+    { name: 'Future Vision', href: '#vision' },
+    { name: 'FAQ', href: '#faq' },
+    { name: 'Waitlist', href: '#waitlist' }
   ],
   support: [
     { name: 'Help Center', href: '#' },

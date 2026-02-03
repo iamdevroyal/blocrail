@@ -3,20 +3,20 @@ import { CheckCircle2, Link as LinkIcon, ShieldCheck, Zap } from 'lucide-vue-nex
 
 const features = [
   {
-    title: 'Protected Checkout Links',
-    description: 'Generate secure links for your products in seconds. Share them in DMs or your bio.'
+    title: 'One Unique Link',
+    description: 'Generate a single checkout link before you go live. Drop it in your bio or comments.'
   },
   {
-    title: 'Automated Escrow',
-    description: 'Funds are held securely until the buyer confirms receipt, protecting both parties.'
+    title: 'Zero Admin Chaos',
+    description: 'No fake screenshots, no messy DMs, and no manual order tracking.'
   },
   {
-    title: 'Smart Order Tracking',
-    description: 'All your live session orders in one clean dashboard. No more manual tracking.'
+    title: 'Secure Escrow',
+    description: 'Payments are held securely. You get paid when delivery is confirmed.'
   },
   {
-    title: 'Risk-Based Payouts',
-    description: 'The more you sell and successfully deliver, the faster you get paid.'
+    title: 'Stress-Free Sales',
+    description: 'Focus on your live stream energy, not on chasing bank transfers.'
   }
 ]
 </script>
@@ -28,11 +28,14 @@ const features = [
         <div class="animate-fade-in-up">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-semibold mb-6">
             <ShieldCheck class="w-4 h-4" />
-            <span>Built for Trust</span>
+            <span>Checkout-as-a-Service</span>
           </div>
-          <h2 class="section-title mb-8">Streamline Your <span class="gradient-text">Live Commerce</span></h2>
-          <p class="text-xl text-text-secondary mb-12 leading-relaxed">
-            Blocrail streamlines your live selling workflow so you can focus on your audience, not the administration.
+          <h2 class="section-title mb-8">One Link. <br />Secure Checkout. <br /><span class="gradient-text">Zero Chaos.</span></h2>
+          <p class="text-xl text-text-secondary mb-8 leading-relaxed">
+            Before your live, generate a unique Blocrail checkout link. Drop it in your bio or pin it in comments.
+          </p>
+          <p class="text-lg text-text-muted mb-12">
+            Your viewers click. They order. Payment goes into escrow. You get paid securely.
           </p>
 
           <div class="grid sm:grid-cols-2 gap-8">

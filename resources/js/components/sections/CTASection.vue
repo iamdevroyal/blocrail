@@ -13,18 +13,19 @@ import { Sparkles } from 'lucide-vue-next'
         
         <div class="relative z-10 max-w-3xl mx-auto animate-fade-in-up">
           <h2 class="text-4xl md:text-6xl font-black font-heading mb-8 leading-tight">
-            Ready to <span class="text-white">Secure</span> Your Live Sales?
+            Ready to Stop <br />
+            <span class="text-white">Chasing Screenshots?</span>
           </h2>
           <p class="text-xl text-text-secondary/80 mb-12 leading-relaxed">
-            Join hundreds of trusted sellers who have eliminated payment friction and fraud with Blocrail.
+            Start selling live with secure checkout and escrow protection.
           </p>
           
           <div class="flex flex-wrap gap-6 justify-center">
             <GradientButton size="lg" glow>
-              Start Selling with Blocrail
+              Launch Your First Live Session
             </GradientButton>
             <OutlineButton size="lg">
-              Contact Sales
+              Talk to Sales
             </OutlineButton>
           </div>
 

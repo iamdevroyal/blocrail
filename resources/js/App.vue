@@ -12,6 +12,9 @@ const BenefitsSection = defineAsyncComponent(() => import('./components/sections
 const FeaturesSection = defineAsyncComponent(() => import('./components/sections/FeaturesSection.vue'))
 const PricingSection = defineAsyncComponent(() => import('./components/sections/PricingSection.vue'))
 const VisionSection = defineAsyncComponent(() => import('./components/sections/VisionSection.vue'))
+const FAQSection = defineAsyncComponent(() => import('./components/sections/FAQSection.vue'))
+const AboutSection = defineAsyncComponent(() => import('./components/sections/AboutSection.vue'))
+const WaitlistSection = defineAsyncComponent(() => import('./components/sections/WaitlistSection.vue'))
 const CTASection = defineAsyncComponent(() => import('./components/sections/CTASection.vue'))
 const FooterSection = defineAsyncComponent(() => import('./components/sections/FooterSection.vue'))
 </script>
@@ -38,8 +41,11 @@ const FooterSection = defineAsyncComponent(() => import('./components/sections/F
         <FeaturesSection />
         <PricingSection />
         <VisionSection />
+        <FAQSection />
+        <AboutSection />
+        <WaitlistSection />
         <CTASection />
-      </main>
+      </main>>
 
       <FooterSection />
     </div>

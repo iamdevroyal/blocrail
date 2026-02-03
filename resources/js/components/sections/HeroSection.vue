@@ -24,7 +24,7 @@ const scrollToSection = (href) => {
 
       <!-- Headline -->
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-black font-heading tracking-tight mb-8 leading-[1.1] animate-fade-in-up">
-        Sell Live. <br />
+        Sell Live? <br />
         <span class="gradient-text">Get Paid Securely.</span>
       </h1>
 

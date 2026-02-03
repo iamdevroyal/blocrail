@@ -1,5 +1,5 @@
 <script setup>
-import { Sparkles } from 'lucide-vue-next'
+import { Sparkles, ArrowRight } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -10,30 +10,30 @@ import { Sparkles } from 'lucide-vue-next'
     <div class="max-w-4xl mx-auto relative z-10 animate-fade-in-up">
       <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-text-primary text-sm font-bold mb-10 tracking-widest uppercase">
         <Sparkles class="w-4 h-4 text-purple-500" />
-        <span>Our Vision</span>
+        <span>Future Vision</span>
       </div>
       
-      <h2 class="text-4xl md:text-6xl lg:text-7xl font-black font-heading tracking-tight mb-12 leading-tight">
-        The Infrastructure for the <span class="gradient-text">Future of Commerce.</span>
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-black font-heading tracking-tight mb-8 leading-tight">
+        The Future of <br />
+        <span class="gradient-text">Live Commerce Infrastructure</span>
       </h2>
       
-      <div class="space-y-8">
-        <p class="text-lg md:text-xl text-text-secondary leading-relaxed">
-          Blocrail is building the rails for secure live selling — today through protected checkout links, 
-          tomorrow through native streaming technology. We're just getting started.
-        </p>
+      <p class="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-16">
+        Blocrail is building the rails for secure live selling — today through protected checkout links, 
+        tomorrow through native streaming technology.
+      </p>
+
+      <div class="flex justify-center items-center gap-4 md:gap-12 text-sm md:text-base">
+        <div class="glass-card px-6 py-3 border-purple-500/50 bg-purple-500/10">
+          <span class="font-bold text-white">Phase 1:</span> Secure Checkout
+        </div>
+        <ArrowRight class="w-5 h-5 text-text-muted" />
+        <div class="glass-card px-6 py-3 opacity-50">
+          <span class="font-bold text-white">Phase 2:</span> Native Streaming
+        </div>
       </div>
 
-      <div class="mt-20 flex justify-center gap-12 text-text-muted">
-        <div class="text-center">
-          <div class="text-3xl font-black text-text-primary mb-1">$500B</div>
-          <div class="text-xs font-bold uppercase tracking-wider">Market Size</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-black text-text-primary mb-1">2026</div>
-          <div class="text-xs font-bold uppercase tracking-wider">Infrastructure Goal</div>
-        </div>
-      </div>
+      <p class="mt-12 text-2xl font-black gradient-text">We're just getting started.</p>
     </div>
   </section>
 </template>

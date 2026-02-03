@@ -1,5 +1,5 @@
 <script setup>
-import { Lock, ShieldCheck, UserCheck } from 'lucide-vue-next'
+import { ShieldCheck, UserCheck, Lock, TrendingUp, CheckCircle2 } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -15,58 +15,71 @@ import { Lock, ShieldCheck, UserCheck } from 'lucide-vue-next'
           <ShieldCheck class="w-64 h-64" />
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-16 items-center relative z-10">
-          <div class="animate-fade-in-up">
-            <h2 class="text-4xl md:text-5xl font-bold font-heading mb-8 leading-tight">
-              A Platform Built on <br />
-              <span class="gradient-text">Absolute Trust</span>
-            </h2>
-            <div class="space-y-8">
-              <div class="flex gap-6">
-                <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center">
-                  <Lock class="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-text-primary mb-2">Escrow-as-a-Service</h4>
-                  <p class="text-text-muted leading-relaxed">
-                    We act as a neutral third party, holding funds until the buyer confirms the item is as described. This eliminates payment fraud entirely.
-                  </p>
-                </div>
+        <div class="text-center mb-16 animate-fade-in-up">
+          <h2 class="text-4xl md:text-5xl font-bold font-heading mb-6 leading-tight">
+            Built for Trust — <br class="hidden md:block" />
+            <span class="gradient-text">For Sellers and Buyers</span>
+          </h2>
+          <p class="text-xl text-text-muted max-w-2xl mx-auto">
+            Blocrail uses a smart escrow system that protects both sides.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 relative z-10">
+          <!-- For Buyers -->
+          <div class="animate-fade-in-up bg-white/5 rounded-2xl p-8 border border-white/5">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                <UserCheck class="w-6 h-6 text-blue-400" />
               </div>
-              <div class="flex gap-6">
-                <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center">
-                  <UserCheck class="w-6 h-6 text-blue-500" />
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-text-primary mb-2">Verified Sellers Only</h4>
-                  <p class="text-text-muted leading-relaxed">
-                    Every seller on Blocrail undergoes rigorous KYC and business verification to ensure they are legitimate.
-                  </p>
-                </div>
-              </div>
+              <h3 class="text-2xl font-bold text-white">For Buyers</h3>
             </div>
+            <ul class="space-y-6">
+              <li class="flex items-center gap-4">
+                <CheckCircle2 class="w-6 h-6 text-blue-500" />
+                <span class="text-lg text-text-primary">Secure checkout</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <CheckCircle2 class="w-6 h-6 text-blue-500" />
+                <span class="text-lg text-text-primary">Order confirmation</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <CheckCircle2 class="w-6 h-6 text-blue-500" />
+                <span class="text-lg text-text-primary">Dispute resolution</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
-            <div class="glass-card bg-white/5 p-8 border-white/5">
-              <div class="flex items-center gap-6 mb-8 p-4 rounded-xl bg-purple-500/10 border border-purple-500/20">
-                <div class="text-3xl font-black text-purple-400">100%</div>
-                <div class="text-sm font-medium text-text-secondary leading-tight">
-                  Security guarantee of <br /> funds for both parties
-                </div>
+          <!-- For Sellers -->
+          <div class="animate-fade-in-up bg-white/5 rounded-2xl p-8 border border-white/5" style="animation-delay: 0.2s">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                <ShieldCheck class="w-6 h-6 text-purple-400" />
               </div>
-              <p class="text-text-muted italic leading-relaxed mb-8">
-                "Since switching to Blocrail, I've completely stopped dealing with fake transfer alerts and lost order screenshots. My customers trust me more, and my sales have doubled."
-              </p>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-gradient-purple"></div>
-                <div>
-                  <div class="font-bold text-text-primary">Sarah J.</div>
-                  <div class="text-sm text-text-muted">Verified Fashion Seller</div>
-                </div>
-              </div>
+              <h3 class="text-2xl font-bold text-white">For Sellers</h3>
             </div>
+            <ul class="space-y-6">
+              <li class="flex items-center gap-4">
+                <CheckCircle2 class="w-6 h-6 text-purple-500" />
+                <span class="text-lg text-text-primary">Verified payments</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <CheckCircle2 class="w-6 h-6 text-purple-500" />
+                <span class="text-lg text-text-primary">Structured tracking</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <CheckCircle2 class="w-6 h-6 text-purple-500" />
+                <span class="text-lg text-text-primary">Tier-based faster payouts</span>
+              </li>
+            </ul>
           </div>
+        </div>
+
+        <div class="mt-16 text-center animate-fade-in-up" style="animation-delay: 0.4s">
+          <p class="text-xl md:text-2xl font-medium text-white mb-2">
+            As you build a strong delivery record, you unlock faster fund releases.
+          </p>
+          <p class="text-3xl font-black gradient-text">Trust earns speed.</p>
         </div>
       </div>
     </div>

@@ -1,54 +1,70 @@
 <script setup>
-import { AlertTriangle, Clock, ShieldAlert } from 'lucide-vue-next'
+import { X } from 'lucide-vue-next'
 
-const problems = [
+const painPoints = [
   {
-    icon: ShieldAlert,
-    title: 'Payment Uncertainty',
-    description: 'Buyers are hesitant to pay via direct DM transfers without protection. You lose sales due to lack of trust.'
+    title: 'Fake Payment Alerts',
+    description: 'Buyers send fake screenshots of transfers, leaving you out of pocket.'
   },
   {
-    icon: AlertTriangle,
-    title: 'Screenshots & Chaos',
-    description: 'Juggling payment screenshots and DM receipts is a nightmare. Orders get lost, and customers get frustrated.'
+    title: 'Manual Bank Transfers',
+    description: 'Waiting hours for confirmations while managing dozens of orders.'
   },
   {
-    icon: Clock,
-    title: 'Payout Delays',
-    description: 'Waiting days for traditional processors to release your hard-earned funds after a successful live session.'
+    title: 'WhatsApp Order Confusion',
+    description: 'Lost messages, duplicate orders, and endless back-and-forth chaos.'
+  },
+  {
+    title: 'No Buyer Protection',
+    description: 'Buyers hesitate to pay upfront with no guarantee of delivery.'
+  },
+  {
+    title: 'No Structured Tracking',
+    description: 'Spreadsheets and notes can\'t keep up with live session volume.'
   }
 ]
 </script>
 
 <template>
-  <section id="problem" class="py-24 px-6 bg-bg-secondary/30 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-20 animate-fade-in-up">
-        <h2 class="section-title mb-6">Social Selling is <span class="text-pink-500">Broken</span></h2>
-        <p class="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-          Running a live sale should be about the energy and the products, not chasing payments and verifying bank alerts.
+  <section id="problem" class="relative py-32 px-6 overflow-hidden">
+    <!-- Background Grid -->
+    <div class="absolute inset-0 bg-grid opacity-20"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-6xl font-black font-heading mb-6">
+          Live Selling Is Powerful — <br class="hidden md:block" />
+          <span class="gradient-text">But Payment Is Broken.</span>
+        </h2>
+        <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+          If you sell during live sessions, you already know the chaos:
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div 
-          v-for="(problem, index) in problems" 
-          :key="index"
-          class="glass-card p-10 group hover:bg-bg-tertiary transition-all duration-500"
-          :style="{ animationDelay: `${index * 0.1}s` }"
-        >
-          <div class="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-            <component :is="problem.icon" class="w-8 h-8 text-pink-500" />
+      <!-- Pain Points Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div v-for="(pain, index) in painPoints" :key="index" 
+             class="glass-card p-8 hover:border-red-500/30 transition-all duration-300 group">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+              <X class="w-6 h-6 text-red-500" />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{{ pain.title }}</h3>
+              <p class="text-text-muted">{{ pain.description }}</p>
+            </div>
           </div>
-          <h3 class="text-2xl font-bold mb-4 text-text-primary">{{ problem.title }}</h3>
-          <p class="text-text-muted leading-relaxed">{{ problem.description }}</p>
         </div>
       </div>
 
-      <div class="mt-20 glass-card p-12 text-center border-pink-500/20 bg-pink-500/5 animate-fade-in-up">
-        <p class="text-2xl font-semibold mb-2">The Result?</p>
-        <p class="text-lg text-text-secondary">
-          You're juggling screenshots instead of focusing on sales. Blocrail fixes that.
+      <!-- Bottom Message -->
+      <div class="text-center">
+        <p class="text-2xl md:text-3xl text-text-secondary mb-6 font-medium">
+          You're juggling <span class="text-red-400 font-bold">screenshots</span> instead of focusing on <span class="text-purple-400 font-bold">sales</span>.
+        </p>
+        <p class="text-3xl md:text-4xl font-black font-heading gradient-text">
+          Blocrail fixes that.
         </p>
       </div>
     </div>
