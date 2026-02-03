@@ -17,9 +17,9 @@ const scrollToSection = (href) => {
 
     <div class="max-w-7xl mx-auto relative z-10 text-center">
       <!-- Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-purple-400 text-sm font-semibold mb-8 animate-fade-in-up">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-purple-400 font-semibold mb-8 animate-fade-in-up">
         <Sparkles class="w-4 h-4" />
-        <span>The New Standard for Social Commerce</span>
+        <span class="text-sm-100">The New Standard for Social Commerce</span>
       </div>
 
       <!-- Headline -->
