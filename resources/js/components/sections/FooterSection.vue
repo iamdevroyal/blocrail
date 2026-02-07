@@ -22,8 +22,8 @@ const footerLinks = {
     // { name: 'API Docs', href: '#' }
   ],
   legal: [
-    { name: 'Privacy Policy', href: '#policy' },
-    { name: 'Terms of Service', href: '#terms' }
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' }
   ]
 }
 
