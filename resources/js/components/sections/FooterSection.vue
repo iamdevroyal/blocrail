@@ -27,13 +27,18 @@ const footerLinks = {
   ]
 }
 
-const scrollToSection = (href) => {
+const scrollToSection = async (href) => {
   if (href.startsWith('#')) {
+    if (router.currentRoute.value.path !== '/') {
+      await router.push({ path: '/', hash: href })
+      return
+    }
     const id = href.replace('#', '')
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  } else {
+    router.push(href)
   }
-}
-</script>
+}</script>
 
 <template>
   <footer class="pt-24 pb-12 px-6 bg-bg-primary border-t border-white/5 relative overflow-hidden">

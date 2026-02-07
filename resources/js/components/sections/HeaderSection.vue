@@ -28,10 +28,21 @@ const navLinks = [
   { name: 'Pricing', href: '#pricing' },
 ]
 
-const scrollToSection = (href) => {
+const scrollToSection = async (href) => {
   mobileMenuOpen.value = false
-  const id = href.replace('#', '')
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  
+  if (href.startsWith('#')) {
+    if (router.currentRoute.value.path !== '/') {
+      await router.push({ path: '/', hash: href })
+      return
+    }
+    
+    const id = href.replace('#', '')
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  } else {
+    // Handle external links or other routes if any
+    router.push(href)
+  }
 }
 
 // Smart routing: authenticated users -> dashboard, new users -> register
