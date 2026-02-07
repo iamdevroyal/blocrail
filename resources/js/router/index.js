@@ -9,6 +9,16 @@ const routes = [
         name: 'home',
         component: lazyLoadWithRetry(() => import('@/pages/LandingPage.vue')),
     },
+    {
+        path: '/privacy',
+        name: 'privacy',
+        component: lazyLoadWithRetry(() => import('@/pages/PrivacyPolicy.vue')),
+    },
+    {
+        path: '/terms',
+        name: 'terms',
+        component: lazyLoadWithRetry(() => import('@/pages/TermsOfService.vue')),
+    },
 
     // Auth routes
     {

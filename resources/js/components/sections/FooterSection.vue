@@ -1,28 +1,29 @@
 <script setup>
 import { Github, Twitter, Linkedin, Facebook } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const currentYear = new Date().getFullYear()
 
 const footerLinks = {
   product: [
-    { name: 'Payment Rails', href: '#' },
-    { name: 'Checkout Links', href: '#' },
-    { name: 'Seller Dashboard', href: '#' },
-    { name: 'Pricing', href: '#' }
+    { name: 'Features', href: '#features' },
+    { name: 'Pricing', href: '#pricing' }
   ],
   company: [
     { name: 'About Blocrail', href: '#about' },
-    { name: 'Master Plan', href: '#' },
+    { name: 'Future Vision', href: '#vision' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Waitlist', href: '#waitlist' }
   ],
   support: [
-    { name: 'Help Center', href: '#' },
-    { name: 'Security', href: '#' },
-    { name: 'API Docs', href: '#' }
+    { name: 'Help Center', href: '#faq' },
+    // { name: 'Security', href: '#' },
+    // { name: 'API Docs', href: '#' }
   ],
   legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' }
+    { name: 'Privacy Policy', href: '#policy' },
+    { name: 'Terms of Service', href: '#terms' }
   ]
 }
 
