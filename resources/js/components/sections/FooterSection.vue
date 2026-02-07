@@ -5,27 +5,24 @@ const currentYear = new Date().getFullYear()
 
 const footerLinks = {
   product: [
-    { name: 'Escrow', href: '#trust' },
-    { name: 'Checkout Links', href: '#solution' },
-    { name: 'Seller Dashboard', href: '#features' },
-    { name: 'Pricing', href: '#pricing' }
+    { name: 'Payment Rails', href: '#' },
+    { name: 'Checkout Links', href: '#' },
+    { name: 'Seller Dashboard', href: '#' },
+    { name: 'Pricing', href: '#' }
   ],
   company: [
     { name: 'About Blocrail', href: '#about' },
-    { name: 'Future Vision', href: '#vision' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Master Plan', href: '#' },
     { name: 'Waitlist', href: '#waitlist' }
   ],
   support: [
     { name: 'Help Center', href: '#' },
-    { name: 'Dispute Process', href: '#' },
-    { name: 'Security Policy', href: '#' },
+    { name: 'Security', href: '#' },
     { name: 'API Docs', href: '#' }
   ],
   legal: [
     { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
-    { name: 'Cookie Policy', href: '#' }
+    { name: 'Terms of Service', href: '#' }
   ]
 }
 
@@ -38,8 +35,11 @@ const scrollToSection = (href) => {
 </script>
 
 <template>
-  <footer class="pt-24 pb-12 px-6 bg-bg-primary border-t border-white/5">
-    <div class="max-w-7xl mx-auto">
+  <footer class="pt-24 pb-12 px-6 bg-bg-primary border-t border-white/5 relative overflow-hidden">
+     <!-- Ambient Glow -->
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
       <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20 px-4">
         <!-- Brand Column -->
         <div class="lg:col-span-2">
@@ -47,7 +47,7 @@ const scrollToSection = (href) => {
             <img src="/logo.png" alt="Blocrail Logo" class="h-10 md:h-12 w-auto object-contain" />
           </div>
           <p class="text-text-secondary text-base max-w-sm mb-8 leading-relaxed">
-            The global rail for live commerce security. We enable trust in the $500B social selling market through sophisticated escrow infrastructure.
+            The operating system for AI-powered live commerce. Building the infrastructure for the next generation of social selling.
           </p>
           <div class="flex gap-5">
             <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-text-muted hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300">
@@ -58,9 +58,6 @@ const scrollToSection = (href) => {
             </a>
             <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-text-muted hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300">
               <Github class="w-5 h-5" />
-            </a>
-            <a href="#" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-text-muted hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300">
-              <Facebook class="w-5 h-5" />
             </a>
           </div>
         </div>
@@ -84,13 +81,19 @@ const scrollToSection = (href) => {
 
       <!-- Bottom Bar -->
       <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 px-4">
-        <p class="text-text-muted text-sm font-medium">
-          © {{ currentYear }} Blocrail Technology Ltd. All rights reserved.
-        </p>
+        <div class="flex flex-col gap-2">
+            <p class="text-text-muted text-sm font-medium">
+              © {{ currentYear }} Blocrail Technology Ltd. All rights reserved.
+            </p>
+            <p class="text-text-secondary text-xs opacity-70">
+                Blocrail is currently in phased rollout.
+            </p>
+        </div>
+        
         <div class="flex items-center gap-8">
           <div class="flex items-center gap-2">
-            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-            <span class="text-xs font-bold text-text-muted uppercase tracking-wider">All Systems Operational</span>
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+            <span class="text-xs font-bold text-text-muted uppercase tracking-wider">Systems Operational</span>
           </div>
         </div>
       </div>

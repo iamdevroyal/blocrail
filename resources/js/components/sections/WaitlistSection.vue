@@ -2,6 +2,10 @@
 import { ref } from 'vue'
 import GradientButton from '../ui/GradientButton.vue'
 import { Sparkles, CheckCircle2, AlertCircle } from 'lucide-vue-next'
+import waitlistService from '@/services/waitlist.service'
+import { useToast } from 'vue-toastification'
+
+const toast = useToast()
 
 const form = ref({
   name: '',
@@ -12,19 +16,32 @@ const form = ref({
 const loading = ref(false)
 const success = ref(false)
 const error = ref(null)
+const validationErrors = ref({})
 
 const platforms = ['Instagram', 'TikTok', 'Facebook', 'Other']
 
 const submitWaitlist = async () => {
   loading.value = true
   error.value = null
+  validationErrors.value = {}
   
-  // Simulate API call
-  setTimeout(() => {
-    loading.value = false
+  try {
+    await waitlistService.join(form.value)
     success.value = true
     form.value = { name: '', email: '', platform: '' }
-  }, 1500)
+    toast.success('Successfully joined the waitlist!')
+  } catch (err) {
+    if (err.response?.status === 422) {
+      // Validation errors
+      validationErrors.value = err.response.data.errors || {}
+      error.value = Object.values(validationErrors.value).flat()[0] || 'Please check your input.'
+    } else {
+      error.value = err.response?.data?.message || 'An error occurred. Please try again.'
+    }
+    toast.error(error.value)
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 

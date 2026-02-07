@@ -1,7 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 import GradientButton from '../ui/GradientButton.vue'
 
+const router = useRouter()
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
 
@@ -18,9 +20,11 @@ onUnmounted(() => {
 })
 
 const navLinks = [
-  { name: 'How It Works', href: '#how-it-works' },
-  { name: 'Trust', href: '#trust' },
+  { name: 'Home', href: '#home' },
   { name: 'Features', href: '#features' },
+  { name: 'How It Works', href: '#how-it-works' },
+  { name: 'FAQ', href: '#faq' },
+  { name: 'About', href: '#about' },
   { name: 'Pricing', href: '#pricing' },
 ]
 
@@ -28,6 +32,16 @@ const scrollToSection = (href) => {
   mobileMenuOpen.value = false
   const id = href.replace('#', '')
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
+// Smart routing: authenticated users -> dashboard, new users -> register
+const navigateToApp = () => {
+  const token = localStorage.getItem('token')
+  if (token) {
+    router.push('/seller/dashboard')
+  } else {
+    router.push('/register')
+  }
 }
 </script>
 
@@ -64,7 +78,7 @@ const scrollToSection = (href) => {
       <!-- CTA / Mobile Toggle -->
       <div class="flex items-center gap-4">
         <div class="hidden md:block">
-          <GradientButton size="sm">
+          <GradientButton size="sm" @click="navigateToApp">
             Launch App
           </GradientButton>
         </div>
@@ -123,7 +137,7 @@ const scrollToSection = (href) => {
           >
             {{ link.name }}
           </a>
-          <GradientButton size="md" class="w-full">
+          <GradientButton size="md" class="w-full" @click="navigateToApp">
             Launch App
           </GradientButton>
         </div>

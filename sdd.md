@@ -306,8 +306,8 @@ Laravel Public Folder: Serve from /public directory
 CDN: CloudFlare for global distribution
 Domain Setup:
 
-Primary: kwiqpay.com
-Subdomain for app: app.kwiqpay.com (future)
+Primary: Blocrail.com
+Subdomain for app: app.Blocrail.com (future)
 SSL Certificate: Required (Let's Encrypt or hosting provider)
 
 Phase 1: Core Application Development
@@ -1172,7 +1172,7 @@ No duplicate payments
 Steps:
 
 Use Apache Bench to test checkout page:
-ab -n 100 -c 10 http://kwiqpay.test/api/live/{token}
+ab -n 100 -c 10 http://Blocrail.test/api/live/{token}
 Verify average response time < 2 seconds
 Test concurrent order creation
 Monitor database query count
@@ -1236,7 +1236,7 @@ Mobile responsiveness check
 Deploy to hosting (Netlify/Vercel)
 Deliverables:
 
-✅ Live landing page at kwiqpay.com
+✅ Live landing page at Blocrail.com
 ✅ Mobile-responsive design
 ✅ <2s load time
 ✅ Analytics tracking setup
@@ -1309,6 +1309,3 @@ In-stream product overlays
 Buyer accounts & wallets
 Seller analytics expansion
 Affiliate/referral system
-
-Comment
-Ctrl+Alt+M

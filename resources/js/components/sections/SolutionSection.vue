@@ -3,26 +3,34 @@ import { CheckCircle2, Link as LinkIcon, ShieldCheck, Zap } from 'lucide-vue-nex
 
 const features = [
   {
-    title: 'One Unique Link',
-    description: 'Generate a single checkout link before you go live. Drop it in your bio or comments.'
+    title: 'Secure session-based checkout',
+    description: 'Generate a single session-based checkout link, drop it in your bio or comments and blocrail handles the rest.'
   },
   {
-    title: 'Zero Admin Chaos',
+    title: 'Real-time Payment Confirmation',
     description: 'No fake screenshots, no messy DMs, and no manual order tracking.'
   },
   {
-    title: 'Secure Escrow',
-    description: 'Payments are held securely. You get paid when delivery is confirmed.'
+    title: 'Fraud Signal Monitoring',
+    description: 'Get protected by AI-Powered fraud analysis system.'
   },
   {
     title: 'Stress-Free Sales',
+    description: 'Focus on your live stream energy, not on chasing bank transfers.'
+  },
+  {
+    title: 'Advanced Dashboard-level reporting',
+    description: 'Get deep insight on sales and overall activities.'
+  },
+  {
+    title: 'Settlement tracking',
     description: 'Focus on your live stream energy, not on chasing bank transfers.'
   }
 ]
 </script>
 
 <template>
-  <section id="solution" class="py-24 px-6 relative">
+  <section id="solution" class="py-8 px-6 relative">
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-20 items-center">
         <div class="animate-fade-in-up">
@@ -30,12 +38,12 @@ const features = [
             <ShieldCheck class="w-4 h-4" />
             <span>Checkout-as-a-Service</span>
           </div>
-          <h2 class="section-title mb-8">One Link. <br />Secure Checkout. <br /><span class="gradient-text">Zero Chaos.</span></h2>
+          <h2 class="section-title mb-8">Production Ready <br />Payment Rails For <br /><span class="gradient-text">Live Sellers.</span></h2>
           <p class="text-xl text-text-secondary mb-8 leading-relaxed">
-            Before your live, generate a unique Blocrail checkout link. Drop it in your bio or pin it in comments.
+            Blocrail provides structured payment infrastructure designed for live commerce environments.
           </p>
           <p class="text-lg text-text-muted mb-12">
-            Your viewers click. They order. Payment goes into escrow. You get paid securely.
+             Before your live, generate a unique Blocrail checkout link. Drop it in your bio or pin it in comments - Your viewers click. They order. Payment goes into escrow. You get paid securely.
           </p>
 
           <div class="grid sm:grid-cols-2 gap-8">

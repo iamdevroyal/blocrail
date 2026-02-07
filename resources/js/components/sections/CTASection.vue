@@ -1,8 +1,25 @@
 <script setup>
+import { useRouter } from 'vue-router'
 import GradientButton from '../ui/GradientButton.vue'
 import OutlineButton from '../ui/OutlineButton.vue'
 import { Sparkles } from 'lucide-vue-next'
-</script>
+
+const router = useRouter()
+
+// Smart routing: authenticated users -> dashboard, new users -> register
+const navigateToApp = () => {
+  const token = localStorage.getItem('token')
+  if (token) {
+    router.push('/seller/dashboard')
+  } else {
+    router.push('/register')
+  }
+}
+
+const scrollToSection = (href) => {
+  const id = href.replace('#', '')
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}</script>
 
 <template>
   <section class="py-24 px-6 relative overflow-hidden">
@@ -13,19 +30,19 @@ import { Sparkles } from 'lucide-vue-next'
         
         <div class="relative z-10 max-w-3xl mx-auto animate-fade-in-up">
           <h2 class="text-4xl md:text-6xl font-black font-heading mb-8 leading-tight">
-            Ready to Stop <br />
-            <span class="text-white">Chasing Screenshots?</span>
+            Ready to Start <br />
+            <span class="text-white">Selling Smarter?</span>
           </h2>
           <p class="text-xl text-text-secondary/80 mb-12 leading-relaxed">
-            Start selling live with secure checkout and escrow protection.
+            Start selling live with AI streaming, secure payment and escrow protection.
           </p>
           
           <div class="flex flex-wrap gap-6 justify-center">
-            <GradientButton size="lg" glow>
+            <GradientButton size="lg" glow @click="navigateToApp">
               Launch Your First Live Session
             </GradientButton>
-            <OutlineButton size="lg">
-              Talk to Sales
+            <OutlineButton size="lg" @click="scrollToSection('#waitlist')">
+              Join Waitlist
             </OutlineButton>
           </div>
 

@@ -10,15 +10,19 @@ const toggle = (index) => {
 const faqs = [
   {
     question: 'What is Blocrail?',
-    answer: 'Blocrail is a payment infrastructure platform for live sellers. We provide secure checkout links with escrow protection for sellers who stream on Instagram, TikTok, and Facebook.'
+    answer: 'Blocrail is an AI powered streaming and payment infrastructure platform for live sellers. We provide AI powered streamers and secure payment rails with escrow protection for sellers who stream on Instagram, TikTok, and Facebook.'
   },
   {
-    question: 'How does escrow work?',
+    question: 'How does the AI streaming work?',
+    answer: 'Instead of Going Live yourself, you can rent AI streamers who go live to sell your products, they display, test and answer questions on your behalf when live'
+  },
+  {
+    question: 'How does escrow payment work?',
     answer: 'When a buyer pays, funds are held securely in escrow until you confirm delivery. This protects both you and your buyers from fraud.'
   },
   {
     question: 'How do I get paid?',
-    answer: 'Funds are released to your available balance based on your seller tier. New sellers: 7 days after delivery. Trusted sellers: 3 days. Top sellers: instant release.'
+    answer: 'Funds are released to your available balance based on your seller tier. New sellers: 2 days after delivery. Trusted sellers: 1 day. Top sellers: instant release.'
   },
   {
     question: 'What are seller tiers?',
@@ -26,7 +30,7 @@ const faqs = [
   },
   {
     question: 'What fees do you charge?',
-    answer: 'We charge 3-5% per successful transaction. No monthly fees for basic sellers.'
+    answer: 'We charge 3-5% per successful transaction. No monthly fees for basic sellers. AI Streamers renting is coming soon'
   },
   {
     question: 'Can buyers dispute orders?',
@@ -34,7 +38,7 @@ const faqs = [
   },
   {
     question: 'Do I need a website?',
-    answer: 'No! Blocrail generates a secure checkout link for you. Just share it during your live session.'
+    answer: 'No! Blocrail provides streaming landing pages and secure payment rails for you. Just share it during your live session.'
   },
   {
     question: 'Which platforms do you support?',

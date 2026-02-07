@@ -27,10 +27,10 @@ const steps = [
 </script>
 
 <template>
-  <section id="how-it-works" class="py-24 px-6 bg-bg-secondary/30">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-20 animate-fade-in-up">
-        <h2 class="section-title mb-6">How It <span class="gradient-text">Works</span></h2>
+  <section id="how-it-works" class="py-24 px-6 bg-transparent relative overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-20 animate-on-scroll">
+        <h2 class="section-title mb-6 text-3xl md:text-5xl font-bold font-heading">How It <span class="gradient-text">Works</span></h2>
         <p class="text-xl text-text-secondary max-w-2xl mx-auto">
           Four simple steps to secure your sales and protect your payments.
         </p>
@@ -44,27 +44,21 @@ const steps = [
           <div 
             v-for="(step, index) in steps" 
             :key="index"
-            class="relative text-center group"
-            :style="{ animationDelay: `${index * 0.1}s` }"
+            class="relative text-center group animate-on-scroll"
+            :class="`delay-${(index + 1) * 100}`"
           >
             <!-- Step Number -->
-            <div class="w-20 h-20 rounded-[2.5rem] bg-bg-tertiary border border-white/10 flex items-center justify-center mx-auto mb-8 shadow-glow-purple group-hover:shadow-glow-purple-lg transition-all duration-500 relative z-10">
+            <div class="w-20 h-20 rounded-[2.5rem] bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-8 shadow-[0_0_20px_rgba(168,85,247,0.2)] group-hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-500 relative z-10 backdrop-blur-sm">
               <component :is="step.icon" class="w-8 h-8 text-purple-400 group-hover:scale-110 transition-transform" />
               <!-- Number Badge -->
-              <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-gradient-purple flex items-center justify-center text-white text-sm font-bold">
+              <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm font-bold shadow-lg">
                 {{ index + 1 }}
               </div>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-text-primary">{{ step.title }}</h3>
+            <h3 class="text-2xl font-bold mb-4 text-white">{{ step.title }}</h3>
             <p class="text-text-muted leading-relaxed px-4">{{ step.description }}</p>
           </div>
         </div>
-      </div>
-
-      <div class="text-center animate-fade-in-up" style="animation-delay: 0.4s;">
-        <GradientButton size="lg" glow>
-          Create Your First Live Session
-        </GradientButton>
       </div>
     </div>
   </section>

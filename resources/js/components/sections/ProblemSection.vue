@@ -7,11 +7,11 @@ const painPoints = [
     description: 'Buyers send fake screenshots of transfers, leaving you out of pocket.'
   },
   {
-    title: 'Manual Bank Transfers',
+    title: 'Fragmented Checkout Flows',
     description: 'Waiting hours for confirmations while managing dozens of orders.'
   },
   {
-    title: 'WhatsApp Order Confusion',
+    title: 'Order management confusion',
     description: 'Lost messages, duplicate orders, and endless back-and-forth chaos.'
   },
   {
@@ -19,8 +19,12 @@ const painPoints = [
     description: 'Buyers hesitate to pay upfront with no guarantee of delivery.'
   },
   {
-    title: 'No Structured Tracking',
+    title: 'No Structured Transaction layer',
     description: 'Spreadsheets and notes can\'t keep up with live session volume.'
+  },
+  {
+    title: 'Third Party Social Platforms',
+    description: 'Lack of access to a unified social selling platform'
   }
 ]
 </script>
@@ -34,11 +38,11 @@ const painPoints = [
       <!-- Section Header -->
       <div class="text-center mb-20">
         <h2 class="text-4xl md:text-6xl font-black font-heading mb-6">
-          Live Selling Is Powerful — <br class="hidden md:block" />
-          <span class="gradient-text">But Payment Is Broken.</span>
+          Live Commerce Is Growing — <br class="hidden md:block" />
+          <span class="gradient-text">But Its Infrastructure Is Lagging.</span>
         </h2>
-        <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-          If you sell during live sessions, you already know the chaos:
+        <p class="text-xl text-text-secondary max-w-4xl mx-auto">
+          Across platforms worldwide, live selling is accelerating. But most live commerce sessions suffer same chaos:
         </p>
       </div>
 

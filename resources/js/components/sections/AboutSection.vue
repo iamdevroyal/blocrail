@@ -13,14 +13,14 @@ import { Shield, Zap, Heart } from 'lucide-vue-next'
         <div class="animate-fade-in-up">
           <h2 class="section-title mb-6">About <span class="gradient-text">Blocrail</span></h2>
           <p class="text-xl text-text-secondary leading-relaxed mb-8">
-            We're building the payment infrastructure for the next generation of social commerce.
+            We're building the infrastructure for the next generation of live social commerce.
           </p>
           <div class="space-y-6 text-text-muted text-lg leading-relaxed">
             <p>
-              Live selling is exploding, but payment systems are stuck in the past. Sellers struggle with screenshots, fake alerts, and manual tracking, while buyers hesitate to pay strangers on the internet.
+              Live selling is exploding, but infrastructure and payment systems are stuck in the past. Sellers struggle with live streaming, screenshots, fake alerts, and manual inventory management, while buyers hesitate to pay strangers on the internet.
             </p>
             <p>
-              Blocrail bridges that gap with escrow-protected checkout links designed specifically for live sellers. We replace chaos with infrastructure, and distrust with guaranteed security.
+              Blocrail bridges that gap with AI powered live streaming and escrow-protected payment designed specifically for live sellers. We replace chaos with infrastructure, and distrust with guaranteed security.
             </p>
           </div>
         </div>

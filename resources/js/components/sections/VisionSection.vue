@@ -20,7 +20,7 @@ import { Sparkles, ArrowRight } from 'lucide-vue-next'
       
       <p class="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-16">
         Blocrail is building the rails for secure live selling — today through protected checkout links, 
-        tomorrow through native streaming technology.
+        tomorrow through native AI-Powered streaming technology.
       </p>
 
       <div class="flex justify-center items-center gap-4 md:gap-12 text-sm md:text-base">
@@ -29,7 +29,7 @@ import { Sparkles, ArrowRight } from 'lucide-vue-next'
         </div>
         <ArrowRight class="w-5 h-5 text-text-muted" />
         <div class="glass-card px-6 py-3 opacity-50">
-          <span class="font-bold text-white">Phase 2:</span> Native Streaming
+          <span class="font-bold text-white">Phase 2:</span> AI Native Streaming
         </div>
       </div>
 
