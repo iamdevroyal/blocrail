@@ -1,10 +1,38 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
 import GradientButton from '../ui/GradientButton.vue'
 import OutlineButton from '../ui/OutlineButton.vue'
 import { Shield, Sparkles, Zap, Bot, Database, Lock, Globe, CreditCard, ShoppingBag, Smartphone } from 'lucide-vue-next'
 
 const router = useRouter()
+
+const taglines = [
+  "The Operating System for AI-Powered Live Commerce",
+  "Secure Payment Rails for the Creator Economy",
+  "Infrastructure for the Next Generation of Selling",
+  "Where AI Agents and Commerce Converge"
+]
+
+const currentTagline = ref(taglines[0])
+const fadeState = ref('in') // 'in' or 'out'
+let intervalId = null
+
+onMounted(() => {
+  let index = 0
+  intervalId = setInterval(() => {
+    fadeState.value = 'out'
+    setTimeout(() => {
+      index = (index + 1) % taglines.length
+      currentTagline.value = taglines[index]
+      fadeState.value = 'in'
+    }, 500) // Wait for fade out to complete (matches duration-500)
+  }, 4000)
+})
+
+onUnmounted(() => {
+  if (intervalId) clearInterval(intervalId)
+})
 
 const scrollToSection = (href) => {
   const id = href.replace('#', '')
@@ -69,7 +97,12 @@ const confettiIcons = Array.from({ length: 25 }).map((_, i) => ({
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-purple-400 font-semibold mb-6 animate-fade-in-up">
         <Sparkles class="w-3.5 h-3.5 md:w-4 md:h-4" />
-        <span class="text-xs md:text-sm">The Operating System for AI-Powered Live Commerce</span>
+        <span 
+          class="text-xs md:text-sm transition-opacity duration-500"
+          :class="fadeState === 'out' ? 'opacity-0' : 'opacity-100'"
+        >
+          {{ currentTagline }}
+        </span>
       </div>
 
       <!-- Headline -->
